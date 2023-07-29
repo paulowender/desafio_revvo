@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirecionar para a página inicial (home)
+RewriteRule ^$ /index.php [L]
+
+# Capturar parâmetros
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php?p=$1 [QSA,L]
