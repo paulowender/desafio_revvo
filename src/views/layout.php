@@ -11,12 +11,27 @@
 
 <body>
     <?php require_once 'template/header.php'; ?>
-
-    <div class="content">
-        <div class="carousel">
-            <!-- Conteúdo do carrossel -->
+    <!-- Carousel -->
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="carousel-slide">
+                <img src="https://picsum.photos/1440/335?random=1" alt="Banner 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://picsum.photos/1440/335?random=2" alt="Banner 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://picsum.photos/1440/335?random=3" alt="Banner 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://picsum.photos/1440/335?random=4" alt="Banner 4">
+            </div>
         </div>
-
+        <div class="carousel-indicator"></div>
+        <button class="carousel-prev"><i class="fa fa-chevron-left"></i></button>
+        <button class="carousel-next"><i class="fa fa-chevron-right"></i></button>
+    </div>
+    <div class="content">
         <div class="grid">
             <!-- Conteúdo do pagina -->
             <?= $content ?>
