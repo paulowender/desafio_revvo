@@ -1,18 +1,18 @@
-  <!-- <div class="container"> -->
-  <!-- <div class="header"> -->
-  <h1>MEUS CURSOS</h1>
-  <!-- <a href="create.php">Create</a>
-  </div>
-  <div class="list">
+  <h2>MEUS CURSOS</h2>
+  <div class="grid-list">
     <?php foreach ($courses as $row) : ?>
-
-      <div class="item">
-        <div class="text"><?php echo $row['title']; ?></div>
-        <div class="actions">
-          <a href="update.php?id=<?php echo $row['id']; ?>" class="icon"><i class="icon icon-icon-edit"></i></a>
-          <a href="delete.php?id=<?php echo $row['id']; ?>" class="icon"><i class="icon icon-icon-trash"></i></a>
+      <div class="grid-item">
+        <img src="../../../assets/img/course.png" alt="Imagem do Curso">
+        <div class="card-content">
+          <div class="card-title"><?= strtoupper($row['title']) ?></div>
+          <div class="card-summary"><?= $row['summary'] ?></div>
+          <a href="#" class="btn">VER CURSO</a>
         </div>
       </div>
     <?php endforeach; ?>
-  </div> -->
-  <!-- </div> -->
+    <a href="#" class="btn">
+      <div class="grid-new-item">
+        <img src="../../../assets/img/button_add.png" alt="Novo curso">
+      </div>
+    </a>
+  </div>

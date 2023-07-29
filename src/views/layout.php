@@ -17,7 +17,7 @@
             <!-- Conteúdo do carrossel -->
         </div>
 
-        <div class="grid-list">
+        <div class="grid">
             <!-- Conteúdo do pagina -->
             <?= $content ?>
         </div>

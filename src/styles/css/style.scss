@@ -197,6 +197,68 @@ body {
   padding: 60px;
   flex-direction: column;
   margin-bottom: auto;
+
+  .grid-new-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16;
+    aspect-ratio: 1 / 1;
+    border: #545454 dashed 1px;
+  }
+
+  /* Grid list com 4 colunas */
+  .grid-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* Cards */
+  .grid-item {
+    background-color: #fff;
+    padding: 16;
+    text-align: start;
+    // aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #01a02a;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      padding: 10px 20px;
+      margin-top: auto;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .card-summary {
+      font-size: 14px;
+      color: $secondary-text;
+      margin-bottom: 16px;
+    }
+
+    .btn:hover {
+      background-color: #016b21;
+    }
+  }
 }
 
 /* Estilos do footer */
