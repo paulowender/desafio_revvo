@@ -4,3 +4,5 @@ node_modules
 *.bkp.*
 # Pasta gerada automaticamente
 vendor
+# Arquivo de configurações
+.env
