@@ -1,6 +1,6 @@
 <?php
 
-class ViewHelper
+class ViewRender
 {
     public static function getView($viewName, $data = [])
     {
@@ -17,7 +17,6 @@ class ViewHelper
         }
 
         $content = ob_get_clean(); // Captura o conteúdo do buffer de saída
-
         // Inclui o layout
         $layoutFile = __DIR__ . '/../views/layout.php';
         if (file_exists($layoutFile)) {

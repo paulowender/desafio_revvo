@@ -1,6 +1,7 @@
 <?php
 
-require_once 'src/helpers/ViewHelper.php';
+require_once 'src/helpers/ViewRender.php';
+require_once 'src/config/database.php';
 
 // Obtém a URL atual
 $url = $_SERVER['REQUEST_URI'];
@@ -16,7 +17,7 @@ $controllerName = !empty($segments[0]) ? $segments[0] : 'home';
 $methodName = isset($segments[1]) ? $segments[1] : 'index';
 
 // Inclui o arquivo do controlador
-$controllerFile = __DIR__ . '/src/controllers/' . $controllerName . '.php';
+$controllerFile = __DIR__ . '/src/controllers/' . ucfirst($controllerName) . 'Controller.php';
 if (file_exists($controllerFile)) {
     require_once $controllerFile;
 

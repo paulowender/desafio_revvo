@@ -5,32 +5,32 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const livereload = require('gulp-livereload');
 
-const srcPath = 'src';
-const destPath = 'assets';
+const sassFilePath = 'src/styles';
+const outputCssPath = 'assets';
 
 // Compilar arquivos Sass
 gulp.task('sass', function () {
-    return gulp.src(srcPath + '/css/style.scss')
+    return gulp.src(sassFilePath + '/css/style.scss')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(rename('style.min.css'))
-        .pipe(gulp.dest(destPath + '/css'))
+        .pipe(gulp.dest(outputCssPath + '/css'))
         .pipe(livereload());
 });
 
 // Concatenar e minificar arquivos JavaScript
 gulp.task('scripts', function () {
-    return gulp.src(srcPath + '/js/script.js')
+    return gulp.src(sassFilePath + '/js/script.js')
         .pipe(concat('script.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(destPath + '/js'))
+        .pipe(gulp.dest(outputCssPath + '/js'))
         .pipe(livereload());
 });
 
 // Observar alterações nos arquivos Sass e JavaScript
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch(srcPath + '/**/*.scss', gulp.series('sass'));
-    gulp.watch(srcPath + '/**/*.js', gulp.series('scripts'));
+    gulp.watch(sassFilePath + '/**/*.scss', gulp.series('sass'));
+    gulp.watch(sassFilePath + '/**/*.js', gulp.series('scripts'));
 });
 
 // Tarefa padrão do Gulp
