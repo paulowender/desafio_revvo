@@ -1,7 +1,20 @@
 ## Desafio Revvo
 
 Desafio Revvo para a vaga de Desenvolvedor PHP Pleno realizado por Paulo Wender de A. Oliveira.
-https://bitbucket.org/leolearningbrasil/desafio-revvo/src/master/
+
+## Objetivo
+Criar um CRUD em PHP que permita:
+- Listar os cursos;
+- Cadastrar um curso;
+- Atualizar um curso;
+- Deletar um curso;
+
+### Regras e Diretrizes: [Desafio Revvo](https://bitbucket.org/leolearningbrasil/desafio-revvo/src/master/)
+
+## Requisitos
+- PHP 7.1 ou superior;
+- MySQL 5.7 ou superior;
+- Composer instalado;
 
 ## Features
 
@@ -9,22 +22,26 @@ https://bitbucket.org/leolearningbrasil/desafio-revvo/src/master/
 
 ## Instalação
 
-### Composer
+### 1. Crie o banco de dados
+Instruções: [Criando o banco de dados](#criando-o-banco-de-dados)
+
+
+### 2. Instale as dependências
 ```bash
 composer install
 ```
 
-### NPM
+### 3. Instale o projeto
 ```bash
 npm install
 ```
 
-## Execução
+## 4. Execute o projeto
 ```bash
 npm run dev
 ```
 
-## Database
+## Criando o banco de dados
 
 Para iniciar crie o banco de dados
 
